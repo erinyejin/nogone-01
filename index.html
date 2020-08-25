@@ -18,7 +18,8 @@
 
 		<title>NoGone</title>
 		<link rel="stylesheet" href="css/styles.css" />
-        
+		<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+		
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
@@ -122,6 +123,10 @@
 				</div>
 			</div>
 		</div>
+
+		<a id="kakao-link-btn" href="javascript:;">
+			<img src="//developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"/>
+		</a>
 
 		<script
 			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -229,6 +234,35 @@
 			}
 		</script>
 		
+		<!-- 200825 카카오 링크 공유 api 연동 -->
+		<script type='text/javascript'>
+			//<![CDATA[
+			  Kakao.init('66eaf07dd60f07a94d95be5d0657e07d');
+		  
+			  Kakao.Link.createDefaultButton({
+				container: '#kakao-link-btn',
+				objectType: 'feed',
+				content: {
+				  title: '내 핸드폰 속 사진의 갬성은?',
+				  description: '#인스타 #틱톡 #싸이월드 #사진작가',
+				  imageUrl: 'https://nogone.cf/img/previews/preview_test.png',
+				  link: {
+					mobileWebUrl: 'https://nogone.cf', // '이미지클릭시 이동할 모바일용 링크주소'
+					webUrl: 'https://nogone.cf'// '이미지클릭시 이동할 PC용 링크주소'
+				  }
+				},
+				buttons: [
+				  {
+					title: '내 사진 갬성 확인하러 가기',
+					link: {
+					  mobileWebUrl: 'https://nogone.cf', // '버튼클릭시 이동할 모바일용 링크주소'
+					  webUrl: 'https://nogone.cf' // '버튼클릭시 이동할 PC용 링크주소'
+					}
+				  }
+				]
+			  });
+			//]]>
+		  </script>
 				<!-- DISQUS 댓글창... 이거 시로! -->
 		<!-- 	JavaScript Start	 -->
 		<!--
