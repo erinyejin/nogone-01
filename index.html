@@ -238,30 +238,38 @@
 		<script type='text/javascript'>
 			//<![CDATA[
 			  Kakao.init('66eaf07dd60f07a94d95be5d0657e07d');
-		  
-			  Kakao.Link.createDefaultButton({
+
+			  Kakao.Link.createCustomButton({
 				container: '#kakao-link-btn',
-				objectType: 'feed',
-				content: {
-				  title: '내 핸드폰 속 사진의 갬성은?',
-				  description: '#인스타 #틱톡 #싸이월드 #사진작가',
-				  imageUrl: 'https://nogone.cf/img/previews/preview_test.png',
-				  link: {
-					mobileWebUrl: 'https://nogone.cf', // '이미지클릭시 이동할 모바일용 링크주소'
-					webUrl: 'https://nogone.cf'// '이미지클릭시 이동할 PC용 링크주소'
-				  }
-				},
-				buttons: [
-				  {
-					title: '내 사진 갬성 확인하러 가기',
-					link: {
-					  mobileWebUrl: 'https://nogone.cf', // '버튼클릭시 이동할 모바일용 링크주소'
-					  webUrl: 'https://nogone.cf' // '버튼클릭시 이동할 PC용 링크주소'
-					}
-				  }
-				]
-			  });
-			//]]>
+				templateId: 35064,
+				// templateArgs: {
+				// 	'title': '제목 영역입니다.',
+				// 	'description': '설명 영역입니다.'
+				}
+			});
+			//   Kakao.Link.createDefaultButton({
+			// 	container: '#kakao-link-btn',
+			// 	objectType: 'feed',
+			// 	content: {
+			// 	  title: '내 핸드폰 속 사진의 갬성은?',
+			// 	  description: '#인스타 #틱톡 #싸이월드 #사진작가',
+			// 	  imageUrl: 'https://nogone.cf/img/previews/preview_test.png',
+			// 	  link: {
+			// 		mobileWebUrl: 'https://nogone.cf',
+			// 		webUrl: 'https://nogone.cf'
+			// 	  }
+			// 	},
+			// 	buttons: [
+			// 	  {
+			// 		title: '내 사진 갬성 확인하러 가기',
+			// 		link: {
+			// 		  mobileWebUrl: 'https://nogone.cf', 
+			// 		  webUrl: 'https://nogone.cf'
+			// 		}
+			// 	  }
+			// 	]
+			//   });
+			// ]]>
 		  </script>
 				<!-- DISQUS 댓글창... 이거 시로! -->
 		<!-- 	JavaScript Start	 -->
