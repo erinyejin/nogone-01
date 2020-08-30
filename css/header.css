@@ -8,6 +8,10 @@ header {
     align-items: center;
 }
 
+.header__header-column {
+    padding-left: 15px;
+}
+
 .header-name {
     font-family: Inter;
     font-style: normal;
