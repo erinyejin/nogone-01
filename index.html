@@ -7,7 +7,7 @@
 		<!-- 미리보기 화면 -->
 		<meta property="og:title" content="NoGone Project">
 		<meta property="og:description" content="내 핸드폰 속 사진의 감성은?">
-		<meta property="og:image" content="https://nogone.cf/img/thumb2.1/.png">
+		<meta property="og:image" content="https://nogone.cf/img/meta.png">
 		<!-- Bootstrap CSS -->
 		<link
 			rel="stylesheet"
@@ -110,14 +110,18 @@
 					</div>
 				</div>
 			</div>
-			<div class="result">
+			<div class="loading-container" id="pg__loading">
+				<img class="loading__img" src="img/loading/loading1.gif"/>
+				<div class="loading__text">감성 찾는 중</div>
+			</div>
+			<div class="result" id="pg__result">
 				<div id="label-container"></div>
 				<div class="result__btns">
 					<button type="button" onclick="removeUpload()" class="btn">
-						<span class="btn__text">다시 해보기<br>RETRY</span>
+						<span class="btn__text">다시 해보기</span>
 					</button>
 					<a id="kakao-link-btn" href="javascript:;" class="btn">
-						<span class="btn__text">카카오톡으로<br>공유하기</span>
+						<span class="btn__text">카카오톡으로 공유하기</span>
 					</a>
 				</div>
 			</div>
@@ -150,12 +154,14 @@
 			function readURL(input) {
 				if (input.files && input.files[0]) {
 					var reader = new FileReader();
+					var loading = document.getElementById('pg__loading');
 
 					reader.onload = function (e) { /*이미지 업로드시*/
 						$('.image-upload-wrap').hide(); /*기존 camera img 가려짐*/
 
 						$('.file-upload-image').attr('src', e.target.result);
 						/* ↓ 랜덤으로 이미지 돌려서 gif 보여줘야함 */
+						loading.style.display = "block"; // 일단 하나만 보여주기 20200830
 						$('.file-upload-content').show(); /*User 업로드 사진이 덮음*/
 
 						$('.image-title').html(input.files[0].name);
@@ -172,9 +178,11 @@
 			}
 
 			function removeUpload() {
+				var result = document.getElementById('pg__result');
 				$('.file-upload-input').replaceWith($('.file-upload-input').clone());
 				$('.file-upload-content').hide();
 				$('.image-upload-wrap').show();
+				result.style.display = "none";
 			}
 			$('.image-upload-wrap').bind('dragover', function () {
 				$('.image-upload-wrap').addClass('image-dropping');
@@ -223,14 +231,19 @@
 			async function predict() {
 				// predict can take in an image, video or canvas html element
 				var image = document.getElementById('sns-image');
+				var uploaded = document.getElementById('.file-upload-content');
+				var loading = document.getElementById('pg__loading');
+				var result = document.getElementById('pg__result');
 				const prediction = await model.predict(image, false);
+
 				for (let i = 0; i < maxPredictions; i++) {
 					const classPrediction =
 						prediction[i].className + ': ' + prediction[i].probability.toFixed(2);
 					// 요기다가 그냥 결과값 보여주는 부분.... 수정 필요필요
 					labelContainer.childNodes[i].innerHTML = classPrediction;
-					// 그담에 로딩 gif 그냥 hide 시키면 될듯용
 				}
+				loading.style.display = "none"
+				result.style.display = "block";
 			}
 		</script>
 		
@@ -242,10 +255,6 @@
 			  Kakao.Link.createCustomButton({
 				container: '#kakao-link-btn',
 				templateId: 35064,
-				// templateArgs: {
-				// 	'title': '제목 영역입니다.',
-				// 	'description': '설명 영역입니다.'
-				// }
 			});
 
 		  </script>
