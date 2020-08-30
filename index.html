@@ -6,8 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<!-- 미리보기 화면 -->
 		<meta property="og:title" content="NoGone Project">
-		<meta property="og:description" content="내 핸드폰 속 사진의 갬성은?">
-		<meta property="og:image" content="https://nogone.cf/img/previews/preview_test.png">
+		<meta property="og:description" content="내 핸드폰 속 사진의 감성은?">
+		<meta property="og:image" content="https://nogone.cf/img/thumb2.1/.png">
 		<!-- Bootstrap CSS -->
 		<link
 			rel="stylesheet"
@@ -19,6 +19,7 @@
 		<title>NoGone</title>
 		<link rel="stylesheet" href="css/styles.css" />
 		<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+		<script src="https://kit.fontawesome.com/b2e375b9b3.js" crossorigin="anonymous"></script>
 		
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
@@ -54,23 +55,23 @@
     
 	<body>
 		<header class="header">
-			<div class="header-brand">
+			<div class="header__header-column">
 				<a href="index.html">
-					<img src="img/logo_small.png">
-				<span class="header-name">Nogone</span>
+					<img src="img/logo_small.png"/>
+				<span class="header-name">NoGone</span>
 				</a>
 			</div>
-			<nav class="navbar">
+			<!-- <nav class="header__header-column navbar">
 				<button
 					class="navbar-toggler"
 					type="button"
 					data-toggle="collapse"
 					data-target="#navbarNav" 
 					aria-controls="navbarNav"
-					aria-expanded="false"
+					aria-expanded="true"
 					aria-label="Toggle navigation"
 				>
-					<span class="navbar-toggler-icon"></span>
+					<img src="img/ham_btn.png"/>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarNav">
 					<ul class="navbar-nav">
@@ -85,48 +86,47 @@
 						</li>
 					</ul>
 				</div>
-			</nav>
+			</nav> -->
 		</header>
-		
-		<section class="section">
-			<h1 class="title">내 사진은 뭔 갬성인가</h1>
-			<h5 class="subtitle">NoGone Project #1</h5>
-			<h8 class="desc">
-				(with : Castle, BlackCat, Jamie)
-			</h8>
-		</section>
-		<script
-			class="jsbin"
-			src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
-		></script>
-		<div class="file-upload">
-			<div class="image-upload-wrap">
-				<input
-					class="file-upload-input"
-					type="file"
-					onchange="readURL(this);"
-					accept="image/*"
-				/>
-				<div class="drag-text">
-					<img src="img/camera_upload.svg" class="mt-5 pt-3 upload responsive" />
-
-					<h3 id="bhs" class="drag-text">Photo here.</h3>
+		<main>
+			<script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+			<div class="upload">
+				<div class="file-upload">
+					<div class="image-upload-wrap">
+						<input
+							class="file-upload-input"
+							type="file"
+							onchange="readURL(this);"
+							accept="image/*"
+						/>
+						<div class="drag-text">
+							<i class="fas fa-camera-retro fa-3x"></i>
+							<div>당신의 좋은 사진을 여기에!</div>
+							<div>Your nice pic goes here!</div>
+						</div>
+					</div>
+					<div class="file-upload-content">
+						<img class="file-upload-image" id="sns-image" src="#" alt="your image" />
+					</div>
 				</div>
 			</div>
-			<div class="file-upload-content">
-				<img class="file-upload-image" id="sns-image" src="#" alt="your image" />
+			<div class="result">
 				<div id="label-container"></div>
-				<div class="image-title-wrap">
-					<button type="button" onclick="removeUpload()" class="remove-image">
-						Remove <span class="image-title">Uploaded Image</span>
+				<div class="result__btns">
+					<button type="button" onclick="removeUpload()" class="btn">
+						<span class="btn__text">다시 해보기<br>RETRY</span>
 					</button>
+					<a id="kakao-link-btn" href="javascript:;" class="btn">
+						<span class="btn__text">카카오톡으로<br>공유하기</span>
+					</a>
 				</div>
 			</div>
-		</div>
-
-		<a id="kakao-link-btn" href="javascript:;">
-			<img src="//developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"/>
-		</a>
+		</main>
+		<footer class="footer">
+			<div class="footer-container">
+				<img class="footer-img" src="img/footer.png"/>
+			</div>
+		</footer>
 
 		<script
 			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
