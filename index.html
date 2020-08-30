@@ -53,40 +53,40 @@
 	</head>
     
 	<body>
-		<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light nav-distance"> -->
-   		<nav class="navbar navbar-light bg-light nav-distance">
-
-			<a class="navbar-brand" href="#"><p id="bhs">NoGone</p></a>
-			<button
-				class="navbar-toggler"
-				type="button"
-				data-toggle="collapse"
-				data-target="#navbarNav" 
-				aria-controls="navbarNav"
-				aria-expanded="false"
-				aria-label="Toggle navigation"
-			>
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav">
-					<li class="nav-item">
-						<a class="nav-link" href="javascript:Frameset('#')" >Home </a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="javascript:Frameset('#')">Playing</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="javascript:Frameset('#')">Info</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
-							>Note</a
-						>
-					</li>
-				</ul>
+		<header class="header">
+			<div class="header-brand">
+				<a href="index.html">
+					<img src="img/logo_small.png">
+				<span class="header-name">Nogone</span>
+				</a>
 			</div>
-		</nav>
+			<nav class="navbar">
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarNav" 
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="javascript:Frameset('#')" >#Project</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="javascript:Frameset('#')">#Team</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="javascript:Frameset('#')">Download</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
 		
 		<section class="section">
 			<h1 class="title">내 사진은 뭔 갬성인가</h1>
@@ -247,58 +247,9 @@
 				// 	'description': '설명 영역입니다.'
 				// }
 			});
-			//   Kakao.Link.createDefaultButton({
-			// 	container: '#kakao-link-btn',
-			// 	objectType: 'feed',
-			// 	content: {
-			// 	  title: '내 핸드폰 속 사진의 갬성은?',
-			// 	  description: '#인스타 #틱톡 #싸이월드 #사진작가',
-			// 	  imageUrl: 'https://nogone.cf/img/previews/preview_test.png',
-			// 	  link: {
-			// 		mobileWebUrl: 'https://nogone.cf',
-			// 		webUrl: 'https://nogone.cf'
-			// 	  }
-			// 	},
-			// 	buttons: [
-			// 	  {
-			// 		title: '내 사진 갬성 확인하러 가기',
-			// 		link: {
-			// 		  mobileWebUrl: 'https://nogone.cf', 
-			// 		  webUrl: 'https://nogone.cf'
-			// 		}
-			// 	  }
-			// 	]
-			//   });
-			// ]]>
+
 		  </script>
-				<!-- DISQUS 댓글창... 이거 시로! -->
-		<!-- 	JavaScript Start	 -->
-		<!--
-		<div id="disqus_thread"></div>
-		<script>
-			/**
-			 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-			 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-			/*
-var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-			(function () {
-				// DON'T EDIT BELOW THIS LINE
-				var d = document,
-					s = d.createElement('script');
-				s.src = 'https://nogone.disqus.com/embed.js';
-				s.setAttribute('data-timestamp', +new Date());
-				(d.head || d.body).appendChild(s);
-			})();
-		</script>
-		<noscript
-			>Please enable JavaScript to view the
-			<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript
-		>
-		-->
+
 	</body>
 	<!-- Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
 
