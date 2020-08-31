@@ -157,3 +157,7 @@ a, a:hover, a:focus {
 #pg__loading, #pg__result {
 	display: none;
 }
+
+.scroll {
+	height: 1000px;
+}
