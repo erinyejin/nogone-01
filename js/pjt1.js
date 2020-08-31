@@ -52,15 +52,13 @@ async function init() {
 async function predict() {
 	// predict can take in an image, video or canvas html element
 	var image = document.getElementById('sns-image');
-	var uploaded = document.getElementById('.file-upload-content');
-	var loading = document.getElementById('pg__loading');
-	var result = document.getElementById('pg__result');
 	const prediction = await model.predict(image, false);
 
 	for (let i = 0; i < maxPredictions; i++) {
 		const classPrediction =	prediction[i].className + ': ' + prediction[i].probability.toFixed(2);
 		labelContainer.childNodes[i].innerHTML = classPrediction;
     }
+    $('.file-upload-content').show();
     $('.loading').hide();
     $('.result').show();
 }
@@ -93,7 +91,7 @@ function removeUpload() {
     var result = document.getElementById('pg__result');
     $('.file-upload-input').replaceWith($('.file-upload-input').clone());
     $('.file-upload-content').hide();
-    $('.image-upload-wrap').show();
+    $('.upload').show();
     $('.result').hide();
 }
 $('.image-upload-wrap').bind('dragover', function () {
