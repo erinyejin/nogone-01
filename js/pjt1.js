@@ -60,23 +60,21 @@ async function predict() {
 	for (let i = 0; i < maxPredictions; i++) {
 		const classPrediction =	prediction[i].className + ': ' + prediction[i].probability.toFixed(2);
 		labelContainer.childNodes[i].innerHTML = classPrediction;
-	}
-    loading.style.display = "none"
-    result.style.display = "block";
+    }
+    $('.loading').hide();
+    $('.result').show();
 }
 
 function readURL(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
-        var loading = document.getElementById('pg__loading');
 
         reader.onload = function (e) { /*이미지 업로드시*/
-            $('.image-upload-wrap').hide(); /*기존 camera img 가려짐*/
+            $('.upload').hide(); /*기존 camera img 가려짐*/
 
             $('.file-upload-image').attr('src', e.target.result);
-            /* ↓ 랜덤으로 이미지 돌려서 gif 보여줘야함 */
-            loading.style.display = "block"; // 일단 하나만 보여주기 20200830
-            $('.file-upload-content').show(); /*User 업로드 사진이 덮음*/
+            $('.loading').show();
+            //$('.file-upload-content').show(); /*User 업로드 사진이 덮음*/
 
             $('.image-title').html(input.files[0].name);
         };
@@ -96,7 +94,7 @@ function removeUpload() {
     $('.file-upload-input').replaceWith($('.file-upload-input').clone());
     $('.file-upload-content').hide();
     $('.image-upload-wrap').show();
-    result.style.display = "none";
+    $('.result').hide();
 }
 $('.image-upload-wrap').bind('dragover', function () {
     $('.image-upload-wrap').addClass('image-dropping');
