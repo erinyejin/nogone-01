@@ -1,0 +1,158 @@
+.file-upload {
+    margin: 0 auto;
+    margin-top: 55px;
+    width: 310px;
+    height: 188px;
+	background:
+		linear-gradient(217deg, rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0) 70.71%),
+		linear-gradient(127deg, rgba(0, 255, 0, 0.5), rgba(0, 255, 0, 0) 70.71%),
+		linear-gradient(336deg, rgba(0, 0, 255, 0.5), rgba(0, 0,255, 0) 70.71%);
+	border-radius: 10px;
+    object-fit: contain;
+	font-family: 'object-fit: contain;';
+	align-items: center;
+}
+
+.image-upload-wrap {
+	padding: 5px;
+}
+
+.file-upload-input {
+    position: absolute;
+    width: 300px;
+    height: 178px;
+	outline: none;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.file-upload-icon {
+    width: 300px;
+    height: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.file-upload-text {
+    width: 300px;
+    font-family: 'Titillium Web', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 31px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #000000;
+}
+
+.upload-kor {
+    width: inherit;
+    margin-top: 17px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #000000;
+}
+
+.upload-eng {
+    width: inherit;
+    margin-top: 1px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #6CCAFF;
+}
+
+.file-upload-content {
+	display: none;
+	text-align: center;
+}
+
+.file-upload-image {
+	max-height: 200px;
+	max-width: 200px;
+	margin: auto;
+	padding: 20px;
+}
+
+.loading-container {
+	display: flex;
+	flex-flow: column;
+    justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.loading__img {
+    width: 100%;
+	height: 100%;
+    object-fit: contain;
+	font-family: 'object-fit: contain;';
+	border-radius: 20px;
+}
+
+.loading__text {
+	text-align: center;
+	margin-top: 5px;
+    font-family: Inter;
+	font-size: 15px;
+}
+
+.result__btns {
+	display: flex;
+	flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+	width: 150px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	color: #ffffff;
+	background: #DFDFDF;
+	border: none;
+	padding: 3px;
+	border-radius: 20px;
+	border-bottom: 4px solid #D1D1D1;
+	transition: all 0.2s ease;
+	outline: none;
+	text-transform: uppercase;
+}
+
+.btn:hover {
+	background: #E2E2E2;
+	border-bottom: 4px solid #E0E0E0;
+	color: #ffffff;
+	transition: all 0.2s ease;
+	cursor: pointer;
+}
+
+.btn:active {
+	border: 0;
+	transition: all 0.2s ease;
+}
+
+.btn__text {
+	text-align: center;
+	font-family: Inter;
+	font-size: 12px;
+}
+
+#label-container {
+	margin-top: 20px;
+	text-align: center;
+}
+
+#pg__loading, #pg__result {
+	display: none;
+}
