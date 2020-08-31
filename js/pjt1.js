@@ -98,7 +98,7 @@ $('.image-upload-wrap').bind('dragleave', function () {
 
 
 $(window).scroll(function(){ 
-    if ($(window).scrollTop() >= 60) { 
+    if ($(window).scrollTop() >= 10) { 
         $('header').addClass('fixed'); 
     } else {
         $('header').removeClass('fixed'); 
