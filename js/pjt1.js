@@ -95,3 +95,12 @@ $('.image-upload-wrap').bind('dragover', function () {
 $('.image-upload-wrap').bind('dragleave', function () {
     $('.image-upload-wrap').removeClass('image-dropping');
 });
+
+
+$(window).scroll(function(){ 
+    if ($(window).scrollTop() >= 60) { 
+        $('header').addClass('fixed'); 
+    } else {
+        $('header').removeClass('fixed'); 
+    } 
+});
