@@ -48,6 +48,7 @@ button.navbar-toggler:focus {
 }
 
 .navbar-nav {
+    position: sticky;
     width: 100px;
     padding: 12px;
     background-color: #ffffff;
@@ -55,6 +56,7 @@ button.navbar-toggler:focus {
     border-radius: 5px;
     border: 0.4px solid #D1CDCD;
     box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
 }
 
 .dropdown-menu {
@@ -83,10 +85,6 @@ button.navbar-toggler:focus {
     color: inherit;
     text-decoration: none;
     background-color: #ffffff;
-}
-
-#menu {
-    z-index: 1000;
 }
 
 /* PC ver. */
