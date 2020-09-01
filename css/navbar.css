@@ -36,6 +36,10 @@ img.brand-img {
     padding: 0px;
 }
 
+button.navbar-toggler:focus {
+    outline: 1px none;
+}
+
 #main_nav {
     font-family: Inter;
     font-style: normal;
