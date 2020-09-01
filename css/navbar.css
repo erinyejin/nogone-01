@@ -7,6 +7,7 @@
     justify-content: space-between;
     align-items: center;
     letter-spacing: 0.02em;
+    z-index: 1000;
 }
 
 .fixed {
@@ -40,15 +41,16 @@ button.navbar-toggler:focus {
 }
 
 #main_nav {
+    width: 100px !important;
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
     font-size: 10px;
     line-height: 12px;
+    margin-left: calc(100% - 100px);
 }
 
 .navbar-nav {
-    position: sticky;
     width: 100px;
     padding: 12px;
     background-color: #ffffff;
