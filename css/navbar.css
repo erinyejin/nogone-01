@@ -85,6 +85,10 @@ button.navbar-toggler:focus {
     background-color: #ffffff;
 }
 
+#menu {
+    z-index: 1000;
+}
+
 /* PC ver. */
 @media screen and (min-width: 1004px) {
 	.fixed{

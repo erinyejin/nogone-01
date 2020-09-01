@@ -28,7 +28,7 @@
 	outline: none;
 	opacity: 0;
     cursor: pointer;
-    z-index: -1;
+    z-index: 1;
 }
 
 .file-upload-icon {
