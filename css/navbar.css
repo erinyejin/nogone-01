@@ -12,7 +12,7 @@
 .fixed {
     position: fixed;
     top: 0;
-    left: 0;
+    margin: 0 auto;
     border-bottom: 1px solid #E5E4E1;
 }
 
@@ -52,9 +52,9 @@ button.navbar-toggler:focus {
     padding: 12px;
     background-color: #ffffff;
     float: right !important;
-    border: 0.2px solid #D1CDCD;
-    box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
+    border: 0.4px solid #D1CDCD;
+    box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.25);
 }
 
 .dropdown-menu {
@@ -83,4 +83,11 @@ button.navbar-toggler:focus {
     color: inherit;
     text-decoration: none;
     background-color: #ffffff;
+}
+
+/* PC ver. */
+@media screen and (min-width: 1004px) {
+	.fixed{
+		width: 80%;
+	}
 }
