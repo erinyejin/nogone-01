@@ -7,6 +7,7 @@
 @import "header.css";
 @import "footer.css";
 @import "pjt1.css";
+@import "navbar.css";
 
 @font-face {
   font-family:'DungGeunMo'; /* 폰트 이름은 임의로 설정 */
@@ -40,4 +41,8 @@ a, a:hover, a:focus {
 	body {
 		width: 80%;
 	}
+}
+
+.scroll {
+	height: 2000px;
 }

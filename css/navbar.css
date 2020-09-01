@@ -1,0 +1,73 @@
+.navbar {
+    height: 50px;
+    padding: 10px 15px 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 0.02em;
+}
+
+.brand-name {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.02em;
+    color: #373539;
+}
+
+img.brand-img {
+    width: 20px;
+    height: 20px;
+}
+
+.navbar-toggler {
+    padding: 0px;
+}
+
+#main_nav {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.navbar-nav {
+    width: 100px;
+    padding: 12px;
+    background-color: #ffffff;
+    float: right !important;
+    border: 0.2px solid #D1CDCD;
+    box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.dropdown-menu {
+    padding-top: 0px;
+    min-width: 0px;
+    width: 76px;
+    border: 0px;
+    border-radius: 0rem;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    
+}
+
+.dropdown-toggle:active {
+    background-color: #DDDCDE;
+}
+
+.dropdown-item {
+    padding-left: 0px;
+}
+
+.dropdown-item:hover, .dropdown-item:focus .dropdown-item:active {
+    color: inherit;
+    text-decoration: none;
+    background-color: #ffffff;
+}

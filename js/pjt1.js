@@ -1,12 +1,3 @@
-/* sticky header */
-$(window).scroll(function(){ 
-    if ($(window).scrollTop() >= 10) { 
-        $('header').addClass('fixed'); 
-    } else {
-        $('header').removeClass('fixed'); 
-    } 
-});
-
 /* Kakao API */
 Kakao.init('66eaf07dd60f07a94d95be5d0657e07d');
 
