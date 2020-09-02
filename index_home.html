@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- meta data for link preview -->
+    <meta property="og:title" content="NoGone Project" />
+    <meta property="og:description" content="내 핸드폰 속 사진의 감성은?" />
+    <meta property="og:image" content="https://nogone.cf/img/meta.png" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <title>NoGone</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/b2e375b9b3.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google analiysis -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-176817334-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-176817334-1");
+    </script>
+  </head>
+  <body>
+    <!-- ** Nav Bar Start **-->
+    <nav id="header" class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="#">
+        <div class="d-lg-none">
+          <img class="brand-img__small" src="img/logo_small.png" /><span
+            class="brand-name"
+            >NoGone</span
+          >
+        </div>
+        <div class="d-none d-lg-block">
+          <img class="brand-img__big" src="img/logo_big.png" /><span
+            class="brand-name"
+            >NoGone</span
+          >
+        </div>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <img src="img/ham_btn.svg" />
+      </button>
+      <div class="navbar-collapse collapse" id="navbarNav">
+        <ul class="navbar-nav justify-content-end" id="menu">
+          <li class="nav-item dropdown">
+            <a class="nav-link proejcts" href="#" data-toggle="dropdown"
+              >#Project<img src="img/vector.svg"
+            /></a>
+            <ul class="dropdown-menu">
+              <li class="d-none d-lg-block" id="link-main">
+                <a class="dropdown-item" href="#">🌈 NoGone</a>
+              </li>
+              <li><a class="dropdown-item" href="#">🍺 Project #1</a></li>
+              <li>
+                <a
+                  class="dropdown-item text-muted"
+                  href="#none"
+                  onclick="false"
+                >
+                  🍺 Project #2<br />(coming soon)
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">#Team</a></li>
+          <li class="nav-item disabled">
+            <a class="nav-link disabled" href="#">Download</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- ** Nav Bar End **-->
+
+    <!-- **main contents **-->
+    <main style="color: rgb(4, 4, 4); fill: currentcolor; line-height: 1.5;
+    font-family: inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe
+    UI Symbol"; background: rgb(255, 254, 252); font-size: 17px;
+    -webkit-font-smoothing: antialiased;">
+    <!-- **Home_section #1 start-->
+      <section style="padding-left: 40px; padding-right: 40px; width: 100%; margin: 40px auto; overflow: visible;">
+        <div style="width: 100%; border-radius: 3px;">
+          <div style="width: 100%; max-width: 1260px; margin: 0px auto;">
+            <div style="margin-top: 40px;">
+              <!-- **Image Contents (사진 평가 컨텐츠 이미지)시작 **-->
+              <div style="margin-top: 20px; margin-bottom: 20px; padding-top: 0px; padding-bottom: 0px; display: flex; flex-direction: column; align-items: center;">
+                <div style="width: 100%; max-width: 677px; margin: 0px auto;">
+                  <div style="width: 100%; position: relative; overflow: hidden; margin: 0px auto;">
+                    <div style="padding-top: 60%; height: 0px;">
+                      <img src ="img/previews/main_contents.png" style="display: block; width: 100%; position: absolute; top: 0px; left: 0px;">
+                  </div>
+                </div>
+              </div>      
+            </div> <!-- **Image Contents (사진 평가 컨텐츠 이미지)끝 **-->
+              <!-- ** H1(Main Contents Text) 시작-->
+              <div style="margin-top: 20px; margin-bottom: 20px; padding-top: 0px; padding-bottom: 0px; display: flex; flex-direction: column; align-items: center;">
+                <div>
+                  <h1 style="margin-top: 10px; margin-bottom: 10px; line-height: 1.1; font-weight: 700; text-align: center; color: rgb(17, 17, 17); font-size: 50px; letter-spacing: -0.005em;">
+                  내 핸드폰 속</h1>
+                  <h1 style="margin-top: 10px; margin-bottom: 10px; line-height: 1.1; font-weight: 700; text-align: center; color: rgb(17, 17, 17); font-size: 50px; letter-spacing: -0.005em;">
+                  사진 갬.성.은 ?</h1>
+                  <a href="http://127.0.0.1:5500/NoGone/index.html" rel="noopener noreferrer" style="display: block; text-decoration: none; user-select: none; cursor: pointer; color: inherit;">
+                  확인하러 가기</a>
+                </div>
+              </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <!-- **Home_section #2 end-->
+  
+  </main>
+
+    <!-- ** Footer Start **-->
+    <footer class="footer">
+      <div class="footer-joke">
+        <div class="footer-joke__heights">180<br /><br />170</div>
+        <div class="footer-joke__box"></div>
+      </div>
+      <div class="footer-real">
+        <div class="footer__footer-row">
+          <img class="footer-img" src="img/logo_small.png" />
+          <span class="footer-name">NoGone</span>
+          <div class="footer-text">Why So Serious?</div>
+          <div class="footer-contact">
+            Help : nogonehelp@gmail.com<br />© 2020 NoGone Team, Inc.<br />All
+            rights reserved.
+          </div>
+        </div>
+        <div class="footer-avatar">
+          <div class="footer-avatar__saying">
+            <div class="d-lg-none">enough is<br />enough?</div>
+            <div class="d-none d-lg-block">
+              Why did you come<br />all the way here?
+            </div>
+          </div>
+          <img class="footer-avatar__avatar" src="img/avatars/blackcat.svg" />
+        </div>
+      </div>
+    </footer>
+    <!-- ** Footer End **-->
+
+    <!-- *** script sources start *** -->
+    <!-- bootstrap 4.5 -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <!-- *** script sources end *** -->
+  </body>
+  <!-- Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
+</html>
