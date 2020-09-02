@@ -2,7 +2,7 @@
     width: 100%;
     height: 50px;
     background-color:  #FFFFFF;
-    padding: 10px 15px;
+    padding: 9px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,10 +33,12 @@ img.brand-img__small {
 
 .navbar-toggler {
     padding: 0px;
+    border: 0px;
 }
 
 button.navbar-toggler:focus {
-    outline: 1px none;
+    outline: 0px none;
+    border: 0px;
 }
 
 #main_nav {
