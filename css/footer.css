@@ -93,6 +93,11 @@ img.footer-img {
     display: flex;
 }
 
+.footer-avatar__saying {
+    width: fit-content;
+    height: 72px;
+}
+
 .footer-avatar__avatar {
     width: 72px;
     height: 72px;

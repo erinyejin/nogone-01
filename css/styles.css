@@ -37,12 +37,12 @@ a, a:hover, a:focus {
 }
 
 /* PC ver. */
-@media screen and (min-width: 1004px) {
+@media screen and (min-width: 992px) {
 	body {
 		width: 80%;
 	}
 }
 
 .scroll {
-	height: 1000px;
+	height: 700px;
 }
