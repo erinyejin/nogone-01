@@ -1,0 +1,230 @@
+.navbar {
+    width: 100%;
+    height: 50px;
+    background-color:  #FFFFFF;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 0.02em;
+    z-index: 1000;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    margin: 0 auto;
+    border-bottom: 1px solid #E5E4E1;
+}
+
+.brand-name {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.02em;
+    color: #373539;
+}
+
+img.brand-img__small {
+    height: 20px;
+}
+
+.navbar-toggler {
+    padding: 0px;
+}
+
+button.navbar-toggler:focus {
+    outline: 1px none;
+}
+
+#main_nav {
+    width: 100px !important;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    margin-left: calc(100% - 100px);
+}
+
+.navbar-nav {
+    width: 100px;
+    padding: 12px;
+    background-color: #ffffff;
+    float: right !important;
+    border-radius: 5px;
+    border: 0.4px solid #D1CDCD;
+    box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.02em;
+}
+
+.dropdown-menu {
+    padding-top: 0px;
+    min-width: 0px;
+    width: 76px;
+    border: 0px;
+    border-radius: 0rem;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    
+}
+
+.dropdown-toggle:active {
+    background-color: #DDDCDE;
+}
+
+.dropdown-item {
+    padding-left: 0px;
+}
+
+.dropdown-item:hover, .dropdown-item:focus .dropdown-item:active {
+    color: inherit;
+    text-decoration: none;
+    background-color: #ffffff;
+}
+
+.text-muted {
+    cursor: help;
+}
+
+.tooltop {
+    display: inline-block;
+}
+
+
+/* PC ver. */
+img.brand-img__big {
+    height: 40px;
+}
+
+@media screen and (min-width: 992px) {
+    .navbar {
+        width: 100%;
+        height: 80px;
+        background-color:  #FFFFFF;
+        padding: 10px 15px 10px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        letter-spacing: 0.02em;
+        z-index: 1000;
+    }
+
+    .fixed{
+		width: 80%;
+    }
+
+    .brand-name {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        height: 70px;
+        background-color: #ffffff;
+        float: right !important;
+        border-radius: 0px;
+        border: 0px;
+        box-shadow: none;
+        z-index: 1000;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 27px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.02em;
+    }
+
+    .nav-item {
+        width: 91px;
+        height: 43px;
+        vertical-align: middle;
+    }
+
+    .nav-link {
+        width: 91px;
+        height: 43px;
+    }
+
+    .nav-link:hover {
+        width: fit-content;
+        height: fit-content;
+        margin: 0 auto;
+        background-color: #d7dfdf;
+        filter: invert(100%);
+        border-radius: 10px;
+    }
+
+    .dropdown-menu {
+        width: 240px;
+        height: 102px;
+        justify-content: space-evenly;
+        padding: 0px;
+        background: #FFFFFF;
+        border: 0.08px solid #000000;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 2px;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+
+    .dropdown:focus .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+
+    .dropdown-item {
+        margin: 6px 0px;
+        padding: 0px 13px;
+        width: 240px;
+        height: 24px;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        color: #000000;
+    }
+
+    .dropdown-item br {
+        content: ' ';
+    }
+    .dropdown-item br:after {
+        content: ' ';
+    }
+
+    .dropdown-item:hover {
+        background: #EFEFEE;
+    }
+
+    .dropdown-item .coming-soon:hover {
+        background: #EFEFEE !important;
+    }
+
+    #link-main {
+        border-bottom: 1px solid #E5E4E1;
+    }
+
+    .tooltip:hover .hint{
+        visibility: visible;
+    }
+}

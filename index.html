@@ -1,247 +1,280 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<!-- Required meta tags -->
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-		<!-- 미리보기 화면 -->
-		<meta property="og:title" content="NoGone Project">
-		<meta property="og:description" content="내 핸드폰 속 사진의 감성은?">
-		<meta property="og:image" content="https://nogone.cf/img/meta.png">
-		<!-- Bootstrap CSS -->
-		<link
-			rel="stylesheet"
-			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-			integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-			crossorigin="anonymous" 
-		/>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- meta data for link preview -->
+    <meta property="og:title" content="NoGone Project" />
+    <meta property="og:description" content="내 핸드폰 속 사진의 감성은?" />
+    <meta property="og:image" content="https://nogone.cf/img/meta.png" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
 
-		<title>NoGone</title>
-		<link rel="stylesheet" href="css/styles.css" />
-		<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
-		<script src="https://kit.fontawesome.com/b2e375b9b3.js" crossorigin="anonymous"></script>
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-176817334-1"></script>
-		<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+    <title>NoGone</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/b2e375b9b3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-176817334-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-176817334-1");
+    </script>
 
-		gtag('config', 'UA-176817334-1');
-		</script>
-
-		<!-- Favicon -->
-        <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-        <link rel="manifest" href="img/favicon/manifest.json">
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
-        <meta name="theme-color" content="#ffffff">
-        <!-- Favicon End -->
-        
-	</head>
-    
-	<body>
-		<header class="header">
-			<div class="header__header-column">
-				<a href="index.html">
-					<img class="header-img" src="img/logo_small.png"/>
-				<span class="header-name">NoGone</span>
-				</a>
-			</div>
-		</header>
-		<section>
-			<script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-			<div class="upload">
-				<div class="file-upload">
-					<div class="image-upload-wrap">
-						<input
-							class="file-upload-input"
-							type="file"
-							onchange="readURL(this);"
-							accept="image/*"/>
-							<div class="upload-text">
-								<i class="fas fa-camera-retro fa-3x"></i>
-							</div>
-							<div class="upload-text">당신의 좋은 사진을 여기에!<br>Your nice pic goes here!</div>
-						</div>
-					</div>
-					<div class="file-upload-content">
-						<img class="file-upload-image" id="sns-image" src="#" alt="your image" />
-					</div>
-				</div>
-			</div>
-			<div class="loading-container" id="pg__loading">
-				<img class="loading__img" src="img/loading/loading1.gif"/>
-				<div class="loading__text">감성 찾는 중</div>
-			</div>
-			<div class="result" id="pg__result">
-				<div id="label-container"></div>
-				<div class="result__btns">
-					<button type="button" onclick="removeUpload()" class="btn">
-						<span class="btn__text">다시 해보기</span>
-					</button>
-					<a id="kakao-link-btn" href="javascript:;" class="btn">
-						<span class="btn__text">카카오톡으로 공유하기</span>
-					</a>
-				</div>
-			</div>
-		</section>
-		<footer class="footer">
-			<div class="footer-joke">
-				<div class="footer-joke__heights">180<br><br>170</div>
-				<div class="footer-joke__box"></div>
-			</div>
-			<div class="footer-real">
-				<div class="footer__footer-row">
-					<img class="footer-img" src="img/logo_small.png"/>
-					<span class="footer-name">NoGone</span>	
-				<div class="footer-text">Why So Serious?</div>
-				<div class="footer-contact">Help : nogonehelp@gmail.com<br>© 2020 NoGone Team, Inc. All rights reserved.</div>
-				</div>
-				<div class="footer-avatar">
-					<div>Enough is<br>enough?</div>
-					<img class="footer-avatar__avatar" src="img/avatars/blackcat.png"/>
-				</div>
-			</div>
-		</footer>
-		<div class="bigScreen">
-			<span class="bigScreen__text">This app is only for mobile 😱</span>
-		</div>
-		<script
-			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-			crossorigin="anonymous"
-		></script>
-		<script
-			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-			crossorigin="anonymous"
-		></script>
-		<script
-			src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-			integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-			crossorigin="anonymous"
-		></script>
-
-		<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
-		<script>
-			function readURL(input) {
-				if (input.files && input.files[0]) {
-					var reader = new FileReader();
-					var loading = document.getElementById('pg__loading');
-
-					reader.onload = function (e) { /*이미지 업로드시*/
-						$('.image-upload-wrap').hide(); /*기존 camera img 가려짐*/
-
-						$('.file-upload-image').attr('src', e.target.result);
-						/* ↓ 랜덤으로 이미지 돌려서 gif 보여줘야함 */
-						loading.style.display = "block"; // 일단 하나만 보여주기 20200830
-						$('.file-upload-content').show(); /*User 업로드 사진이 덮음*/
-
-						$('.image-title').html(input.files[0].name);
-					};
-
-					reader.readAsDataURL(input.files[0]);
-					init().then(()=>{
-						console.log("hello");
-						predict();
-					})
-				} else {
-					removeUpload();
-				}
-			}
-
-			function removeUpload() {
-				var result = document.getElementById('pg__result');
-				$('.file-upload-input').replaceWith($('.file-upload-input').clone());
-				$('.file-upload-content').hide();
-				$('.image-upload-wrap').show();
-				result.style.display = "none";
-			}
-			$('.image-upload-wrap').bind('dragover', function () {
-				$('.image-upload-wrap').addClass('image-dropping');
-			});
-			$('.image-upload-wrap').bind('dragleave', function () {
-				$('.image-upload-wrap').removeClass('image-dropping');
-			});
-		</script>
-		
-		<script type="text/javascript">
-			// More API functions here:
-			// https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
-
-			// the link to your model provided by Teachable Machine export panel
-			//const URL = 'https://teachablemachine.withgoogle.com/models/59WPBJwsK/'; // 07-25 ~ 08-09/ 첫번째 data set
-			//const URL = 'https://teachablemachine.withgoogle.com/models/tSYJ_WCBU/'; /*08-10-data update*/
-			// const URL = 'https://teachablemachine.withgoogle.com/models/d9n7_Dic3/'; //*08-11-data 분류별data 테스트update*//
-			//const URL = 'https://teachablemachine.withgoogle.com/models/WUHK03fdB/'; //08-16 카테고리추가, 데이터 value 1000개 이상 //
-			//const URL = 'https://teachablemachine.withgoogle.com/models/gWluuh37C/';
-			const URL = 'https://teachablemachine.withgoogle.com/models/fKDLDB2O7/';
-
-
-
-			let model, webcam, labelContainer, maxPredictions;
-
-			// Load the image model and setup the webcam
-			async function init() {
-				const modelURL = URL + 'model.json';
-				const metadataURL = URL + 'metadata.json';
-
-				// load the model and metadata
-				// Refer to tmImage.loadFromFiles() in the API to support files from a file picker
-				// or files from your local hard drive
-				// Note: the pose library adds "tmImage" object to your window (window.tmImage)
-				model = await tmImage.load(modelURL, metadataURL);
-				maxPredictions = model.getTotalClasses();
-
-				labelContainer = document.getElementById('label-container');
-				for (let i = 0; i < maxPredictions; i++) {
-					// 라벨링 순차적으로 div 추가
-					labelContainer.appendChild(document.createElement('div'));
-				}
-			}
-
-			// run the webcam image through the image model
-			async function predict() {
-				// predict can take in an image, video or canvas html element
-				var image = document.getElementById('sns-image');
-				var uploaded = document.getElementById('.file-upload-content');
-				var loading = document.getElementById('pg__loading');
-				var result = document.getElementById('pg__result');
-				const prediction = await model.predict(image, false);
-
-				for (let i = 0; i < maxPredictions; i++) {
-					const classPrediction =
-						prediction[i].className + ': ' + prediction[i].probability.toFixed(2);
-					labelContainer.childNodes[i].innerHTML = classPrediction;
-				}
-				loading.style.display = "none"
-				result.style.display = "block";
-			}
-		</script>
-		
-		<script type='text/javascript'>
-			  Kakao.init('66eaf07dd60f07a94d95be5d0657e07d');
-			  Kakao.Link.createCustomButton({
-				container: '#kakao-link-btn',
-				templateId: 35064,
-			});
-
-		</script>
-	</body>
-	<!-- Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+    <!-- *** Favicon *** -->
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="img/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="img/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="img/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="img/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="img/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="img/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="img/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="img/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="img/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="img/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="img/favicon/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- *** Favicon End *** -->
+  </head>
+  <body>
+    <!-- nav bar for mobile -->
+    <nav id="header" class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="#">
+        <div class="d-lg-none">
+          <img class="brand-img__small" src="img/logo_small.png" /><span
+            class="brand-name"
+            >NoGone</span
+          >
+        </div>
+        <div class="d-none d-lg-block">
+          <img class="brand-img__big" src="img/logo_big.png" /><span
+            class="brand-name"
+            >NoGone</span
+          >
+        </div>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <img src="img/ham_btn.svg" />
+      </button>
+      <div class="navbar-collapse collapse" id="navbarNav">
+        <ul class="navbar-nav justify-content-end" id="menu">
+          <li class="nav-item dropdown">
+            <a class="nav-link proejcts" href="#" data-toggle="dropdown"
+              >#Project<img src="img/vector.svg"
+            /></a>
+            <ul class="dropdown-menu">
+              <li class="d-none d-lg-block" id="link-main">
+                <a class="dropdown-item" href="#">🌈 NoGone</a>
+              </li>
+              <li><a class="dropdown-item" href="#">🍺 Project #1</a></li>
+              <li>
+                <a
+                  class="dropdown-item text-muted"
+                  href="#none"
+                  onclick="false"
+                >
+                  🍺 Project #2<br />(coming soon)
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">#Team</a></li>
+          <li class="nav-item disabled">
+            <a class="nav-link disabled" href="#">Download</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section>
+      <div class="upload">
+        <div class="file-upload">
+          <div class="image-upload-wrap">
+            <input
+              class="file-upload-input"
+              type="file"
+              onchange="readURL(this);"
+              accept="image/*"
+            />
+            <div class="file-upload-icon">
+              <i class="fas fa-camera-retro fa-4x"></i>
+            </div>
+            <div class="file-upload-text">Here</div>
+          </div>
+        </div>
+        <div class="upload-kor">당신의 좋은 사진을 여기에!</div>
+        <div class="upload-eng">Your nice pic goes here!</div>
+      </div>
+      <div class="file-upload-content">
+        <img
+          class="file-upload-image"
+          id="sns-image"
+          src="#"
+          alt="your image"
+        />
+      </div>
+      <div class="loading">
+        <img class="loading__img" src="img/loading/loading1.gif" />
+        <div class="loading__text">감성 찾는 중</div>
+      </div>
+      <div class="result">
+        <div id="label-container"></div>
+        <div class="result__btns">
+          <button type="button" onclick="removeUpload()" class="btn">
+            <span class="btn__text">다시 해보기</span>
+          </button>
+          <a id="kakao-link-btn" href="javascript:;" class="btn">
+            <span class="btn__text">카카오톡으로 공유하기</span>
+          </a>
+        </div>
+      </div>
+      <div class="scroll"></div>
+    </section>
+    <footer class="footer">
+      <div class="footer-joke">
+        <div class="footer-joke__heights">180<br /><br />170</div>
+        <div class="footer-joke__box"></div>
+      </div>
+      <div class="footer-real">
+        <div class="footer__footer-row">
+          <img class="footer-img" src="img/logo_small.png" />
+          <span class="footer-name">NoGone</span>
+          <div class="footer-text">Why So Serious?</div>
+          <div class="footer-contact">
+            Help : nogonehelp@gmail.com<br />© 2020 NoGone Team, Inc.<br />All
+            rights reserved.
+          </div>
+        </div>
+        <div class="footer-avatar">
+          <div class="footer-avatar__saying">
+            <div class="d-lg-none">enough is<br />enough?</div>
+            <div class="d-none d-lg-block">
+              Why did you come<br />all the way here?
+            </div>
+          </div>
+          <img class="footer-avatar__avatar" src="img/avatars/blackcat.svg" />
+        </div>
+      </div>
+    </footer>
+    <!-- *** script sources start *** -->
+    <!-- from codepen, to upload file -->
+    <script
+      class="jsbin"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+    ></script>
+    <!-- bootstrap 4.5 -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <!-- teachablemachine; tensorflow & teachablemachine -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/pjt1.js" type="text/javascript" charset="utf-8"></script>
+    <!-- *** script sources end *** -->
+  </body>
+  <!-- Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
