@@ -18,7 +18,6 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
-
     <title>NoGone</title>
     <link rel="stylesheet" href="css/styles.css" />
     <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
@@ -26,6 +25,7 @@
       src="https://kit.fontawesome.com/b2e375b9b3.js"
       crossorigin="anonymous"
     ></script>
+    <!-- Google analiysis -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=UA-176817334-1"
@@ -38,88 +38,9 @@
       gtag("js", new Date());
       gtag("config", "UA-176817334-1");
     </script>
-
-    <!-- *** Favicon *** -->
-    <link
-      rel="apple-touch-icon"
-      sizes="57x57"
-      href="img/favicon/apple-icon-57x57.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="60x60"
-      href="img/favicon/apple-icon-60x60.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="img/favicon/apple-icon-72x72.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="img/favicon/apple-icon-76x76.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="img/favicon/apple-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="img/favicon/apple-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="img/favicon/apple-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="img/favicon/apple-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="img/favicon/apple-icon-180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="img/favicon/android-icon-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="img/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="img/favicon/favicon-96x96.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="img/favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="img/favicon/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta
-      name="msapplication-TileImage"
-      content="img/favicon/ms-icon-144x144.png"
-    />
-    <meta name="theme-color" content="#ffffff" />
-    <!-- *** Favicon End *** -->
   </head>
   <body>
-    <!-- nav bar for mobile -->
+    <!-- ** Nav Bar Start **-->
     <nav id="header" class="navbar navbar-expand-lg">
       <a class="navbar-brand" href="#">
         <div class="d-lg-none">
@@ -175,50 +96,51 @@
         </ul>
       </div>
     </nav>
-    <section>
-      <div class="upload">
-        <div class="file-upload">
-          <div class="image-upload-wrap">
-            <input
-              class="file-upload-input"
-              type="file"
-              onchange="readURL(this);"
-              accept="image/*"
-            />
-            <div class="file-upload-icon">
-              <i class="fas fa-camera-retro fa-4x"></i>
+    <!-- ** Nav Bar End **-->
+
+    <!-- **main contents **-->
+    <main style="color: rgb(4, 4, 4); fill: currentcolor; line-height: 1.5;
+    font-family: inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe
+    UI Symbol"; background: rgb(255, 254, 252); font-size: 17px;
+    -webkit-font-smoothing: antialiased;">
+    <!-- **Home_section #1 start-->
+      <section style="padding-left: 40px; padding-right: 40px; width: 100%; margin: 40px auto; overflow: visible;">
+        <div style="width: 100%; border-radius: 3px;">
+          <div style="width: 100%; max-width: 1260px; margin: 0px auto;">
+            <div style="margin-top: 40px;">
+              <!-- **Image Contents (사진 평가 컨텐츠 이미지)시작 **-->
+              <div style="margin-top: 20px; margin-bottom: 20px; padding-top: 0px; padding-bottom: 0px; display: flex; flex-direction: column; align-items: center;">
+                <div style="width: 100%; max-width: 677px; margin: 0px auto;">
+                  <div style="width: 100%; position: relative; overflow: hidden; margin: 0px auto;">
+                    <div style="padding-top: 60%; height: 0px;">
+                      <img src ="img/previews/main_contents.png" style="display: block; width: 100%; position: absolute; top: 0px; left: 0px;">
+                  </div>
+                </div>
+              </div>      
+            </div> <!-- **Image Contents (사진 평가 컨텐츠 이미지)끝 **-->
+              <!-- ** H1(Main Contents Text) 시작-->
+              <div style="margin-top: 20px; margin-bottom: 20px; padding-top: 0px; padding-bottom: 0px; display: flex; flex-direction: column; align-items: center;">
+                <div>
+                  <h1 style="margin-top: 10px; margin-bottom: 10px; line-height: 1.1; font-weight: 700; text-align: center; color: rgb(17, 17, 17); font-size: 50px; letter-spacing: -0.005em;">
+                  내 핸드폰 속</h1>
+                  <h1 style="margin-top: 10px; margin-bottom: 10px; line-height: 1.1; font-weight: 700; text-align: center; color: rgb(17, 17, 17); font-size: 50px; letter-spacing: -0.005em;">
+                  사진 갬.성.은 ?</h1>
+                  <a href="http://127.0.0.1:5500/NoGone/index.html" rel="noopener noreferrer" style="display: block; text-decoration: none; user-select: none; cursor: pointer; color: inherit;">
+                  확인하러 가기</a>
+                </div>
+              </div>
+                </div>
+              </div>
             </div>
-            <div class="file-upload-text">Here</div>
           </div>
         </div>
-        <div class="upload-kor">당신의 좋은 사진을 여기에!</div>
-        <div class="upload-eng">Your nice pic goes here!</div>
-      </div>
-      <div class="file-upload-content">
-        <img
-          class="file-upload-image"
-          id="sns-image"
-          src="#"
-          alt="your image"
-        />
-      </div>
-      <div class="loading">
-        <img class="loading__img" src="img/loading/loading1.gif" />
-        <div class="loading__text">감성 찾는 중</div>
-      </div>
-      <div class="result">
-        <div id="label-container"></div>
-        <div class="result__btns">
-          <button type="button" onclick="removeUpload()" class="btn">
-            <span class="btn__text">다시 해보기</span>
-          </button>
-          <a id="kakao-link-btn" href="javascript:;" class="btn">
-            <span class="btn__text">카카오톡으로 공유하기</span>
-          </a>
-        </div>
-      </div>
-      <div class="scroll"></div>
-    </section>
+      </section>
+    <!-- **Home_section #2 end-->
+  
+  </main>
+
+    <!-- ** Footer Start **-->
     <footer class="footer">
       <div class="footer-joke">
         <div class="footer-joke__heights">180<br /><br />170</div>
@@ -245,12 +167,9 @@
         </div>
       </div>
     </footer>
+    <!-- ** Footer End **-->
+
     <!-- *** script sources start *** -->
-    <!-- from codepen, to upload file -->
-    <script
-      class="jsbin"
-      src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
-    ></script>
     <!-- bootstrap 4.5 -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -267,11 +186,6 @@
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
-    <!-- teachablemachine; tensorflow & teachablemachine -->
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
-    <script src="js/common.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/pjt1.js" type="text/javascript" charset="utf-8"></script>
     <!-- *** script sources end *** -->
   </body>
   <!-- Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
