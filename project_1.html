@@ -18,7 +18,6 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
-
     <title>NoGone</title>
     <link rel="stylesheet" href="css/styles.css" />
     <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
@@ -26,6 +25,7 @@
       src="https://kit.fontawesome.com/b2e375b9b3.js"
       crossorigin="anonymous"
     ></script>
+    <!-- Google analiysis -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=UA-176817334-1"
@@ -121,15 +121,15 @@
   <body>
     <!-- nav bar for mobile -->
     <nav id="header" class="navbar navbar-expand-lg">
-      <a class="navbar-brand" href="#">
+      <a href="home.html" class="navbar-brand" href="#">
         <div class="d-lg-none">
-          <img class="brand-img__small" src="img/logo_small.png" /><span
+          <img class="brand-img__small" src="img/logo_small.svg" /><span
             class="brand-name"
             >NoGone</span
           >
         </div>
         <div class="d-none d-lg-block">
-          <img class="brand-img__big" src="img/logo_big.png" /><span
+          <img class="brand-img__big" src="img/logo_big.svg" /><span
             class="brand-name"
             >NoGone</span
           >
@@ -154,9 +154,11 @@
             /></a>
             <ul class="dropdown-menu">
               <li class="d-none d-lg-block" id="link-main">
-                <a class="dropdown-item" href="#">🌈 NoGone</a>
+                <a class="dropdown-item" href="home.html">🌈 NoGone</a>
               </li>
-              <li><a class="dropdown-item" href="#">🍺 Project #1</a></li>
+              <li>
+                <a class="dropdown-item" href="project_1.html">🍺 Project #1</a>
+              </li>
               <li>
                 <a
                   class="dropdown-item text-muted"
@@ -226,7 +228,7 @@
       </div>
       <div class="footer-real">
         <div class="footer__footer-row">
-          <img class="footer-img" src="img/logo_small.png" />
+          <img class="footer-img" src="img/logo_small.svg" />
           <span class="footer-name">NoGone</span>
           <div class="footer-text">Why So Serious?</div>
           <div class="footer-contact">
