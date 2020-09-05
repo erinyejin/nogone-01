@@ -14,6 +14,7 @@
     position: fixed;
     top: 0;
     margin: 0 auto;
+    padding-bottom: 4px;
     border-bottom: 1px solid #E5E4E1;
 }
 
@@ -185,6 +186,7 @@ img.brand-img__big {
         width: 240px;
         height: 102px;
         justify-content: space-evenly;
+        margin-top: 19px;
         padding: 0px;
         background: #FFFFFF;
         border: 0.08px solid #000000;
@@ -194,12 +196,10 @@ img.brand-img__big {
 
     .dropdown:hover .dropdown-menu {
         display: block;
-        margin-top: 0;
     }
 
     .dropdown:focus .dropdown-menu {
         display: block;
-        margin-top: 0;
     }
 
     .dropdown-item {
