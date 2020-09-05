@@ -2,7 +2,7 @@
     width: 100%;
     height: 50px;
     background-color:  #FFFFFF;
-    padding: 9px 15px;
+    padding: 5px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,8 +31,13 @@ img.brand-img__small {
     height: 20px;
 }
 
-.navbar-toggler {
-    padding: 0px;
+img.hamburger {
+    height: 30px;
+}
+
+button.navbar-toggler {
+    height: 40px;
+    padding: 5px 0px;
     border: 0px;
 }
 
@@ -41,13 +46,8 @@ button.navbar-toggler:focus {
     border: 0px;
 }
 
-#main_nav {
-    width: 100px !important;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 10px;
-    line-height: 12px;
+#navbarNav{
+    margin-top: 5px;
     margin-left: calc(100% - 100px);
 }
 
@@ -104,6 +104,11 @@ button.navbar-toggler:focus {
     display: inline-block;
 }
 
+a.nav-link:focus {
+    outline: 0px none;
+    border: 0px;
+}
+
 
 /* PC ver. */
 img.brand-img__big {
@@ -130,6 +135,10 @@ img.brand-img__big {
     .brand-name {
         font-size: 16px;
         line-height: 19px;
+    }
+
+    #navbarNav{
+        margin: 0px;
     }
 
     .navbar-nav {
@@ -196,7 +205,6 @@ img.brand-img__big {
     .dropdown-item {
         margin: 6px 0px;
         padding: 0px 13px;
-        width: 240px;
         height: 24px;
         font-family: Inter;
         font-style: normal;
