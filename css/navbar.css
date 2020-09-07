@@ -1,7 +1,7 @@
 .navbar {
     width: 100%;
     height: 50px;
-    background-color:  #FFFFFF;
+    background-color: #ffffff;
     padding: 5px 15px;
     display: flex;
     justify-content: space-between;
@@ -15,7 +15,7 @@
     top: 0;
     margin: 0 auto;
     padding-bottom: 4px;
-    border-bottom: 1px solid #E5E4E1;
+    border-bottom: 1px solid #e5e4e1;
 }
 
 .brand-name {
@@ -47,7 +47,7 @@ button.navbar-toggler:focus {
     border: 0px;
 }
 
-#navbarNav{
+#navbarNav {
     margin-top: 5px;
     margin-left: calc(100% - 100px);
 }
@@ -58,7 +58,7 @@ button.navbar-toggler:focus {
     background-color: #ffffff;
     float: right !important;
     border-radius: 5px;
-    border: 0.4px solid #D1CDCD;
+    border: 0.4px solid #d1cdcd;
     box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.25);
     z-index: 1000;
     font-family: Inter;
@@ -67,6 +67,14 @@ button.navbar-toggler:focus {
     font-size: 10px;
     line-height: 12px;
     letter-spacing: 0.02em;
+}
+
+img.vector-mo {
+    display: inline;
+}
+
+img.vector-pc {
+    display: none;
 }
 
 .dropdown-menu {
@@ -80,18 +88,18 @@ button.navbar-toggler:focus {
     font-weight: normal;
     font-size: 10px;
     line-height: 12px;
-    
 }
 
 .dropdown-toggle:active {
-    background-color: #DDDCDE;
+    background-color: #dddcde;
 }
 
 .dropdown-item {
     padding-left: 0px;
 }
 
-.dropdown-item:hover, .dropdown-item:focus .dropdown-item:active {
+.dropdown-item:hover,
+.dropdown-item:focus .dropdown-item:active {
     color: inherit;
     text-decoration: none;
     background-color: #ffffff;
@@ -102,7 +110,7 @@ button.navbar-toggler:focus {
 }
 
 .tooltop {
-    display: inline-block;
+    display: inline;
 }
 
 a.nav-link:focus {
@@ -110,17 +118,16 @@ a.nav-link:focus {
     border: 0px;
 }
 
-
 /* PC ver. */
 img.brand-img__big {
-    height: 40px;
+    height: 30px;
 }
 
 @media screen and (min-width: 992px) {
     .navbar {
         width: 100%;
         height: 80px;
-        background-color:  #FFFFFF;
+        background-color: #ffffff;
         padding: 10px 15px 10px 15px;
         display: flex;
         justify-content: space-between;
@@ -129,8 +136,8 @@ img.brand-img__big {
         z-index: 1000;
     }
 
-    .fixed{
-		width: 80%;
+    .fixed {
+        width: 80%;
     }
 
     .brand-name {
@@ -138,7 +145,7 @@ img.brand-img__big {
         line-height: 19px;
     }
 
-    #navbarNav{
+    #navbarNav {
         margin: 0px;
     }
 
@@ -182,13 +189,21 @@ img.brand-img__big {
         border-radius: 10px;
     }
 
+    img.vector-mo {
+        display: none;
+    }
+
+    img.vector-pc {
+        display: inline;
+    }
+
     .dropdown-menu {
         width: 240px;
         height: 102px;
         justify-content: space-evenly;
         margin-top: 19px;
         padding: 0px;
-        background: #FFFFFF;
+        background: #ffffff;
         border: 0.08px solid #000000;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
         border-radius: 2px;
@@ -216,25 +231,25 @@ img.brand-img__big {
     }
 
     .dropdown-item br {
-        content: ' ';
+        content: " ";
     }
     .dropdown-item br:after {
-        content: ' ';
+        content: " ";
     }
 
     .dropdown-item:hover {
-        background: #EFEFEE;
+        background: #efefee;
     }
 
     .dropdown-item .coming-soon:hover {
-        background: #EFEFEE !important;
+        background: #efefee !important;
     }
 
     #link-main {
-        border-bottom: 1px solid #E5E4E1;
+        border-bottom: 1px solid #e5e4e1;
     }
 
-    .tooltip:hover .hint{
+    .tooltip:hover .hint {
         visibility: visible;
     }
 }

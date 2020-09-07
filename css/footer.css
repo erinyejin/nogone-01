@@ -37,11 +37,10 @@ footer {
     border-bottom: 1px solid #373539;
 }
 
-
 .footer-real {
     height: 85px;
     width: 100%;
-    border-top: 1px solid #E5E4E1;
+    border-top: 1px solid #e5e4e1;
     padding-top: 4px;
     margin-bottom: 0px;
     font-family: Inter;

@@ -1,0 +1,64 @@
+.pjt2 {
+    margin: 0 auto;
+    padding: 10px 15px;
+    width: 95%;
+    height: 322px;
+    background: #fcf8f4;
+    border-radius: 20px;
+}
+
+.pjt2-text {
+    margin: 0 auto;
+    padding-bottom: 7px;
+    width: fit-content;
+    height: fit-content;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+.pjt2-text-eng {
+    color: #bbafaf;
+}
+
+.pjt2-img {
+    margin: 0 auto;
+    width: fit-content;
+    height: fit-content;
+    align-self: center;
+}
+
+.pjt2-img img {
+    width: fit-content;
+    height: fit-content;
+    display: block;
+    margin: 0 auto;
+    object-fit: scale-down;
+    font-family: "object-fit: scale-down";
+}
+
+/* PC ver. */
+@media screen and (min-width: 992px) {
+    .pjt2 {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .pjt2 img {
+        width: 95%;
+        height: 95%;
+        display: block;
+        margin: 0 auto;
+        object-fit: scale-down;
+        font-family: "object-fit: scale-down";
+    }
+
+    .ad {
+        height: 700px;
+    }
+}
