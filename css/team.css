@@ -1,20 +1,25 @@
 .team-img {
     margin-top: 59px;
-    margin-left: 5%;
-    width: 90%;
-    align-self: center;
+    margin-left: 35%;
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
 }
 
 .team-img img {
     width: 60%;
     display: block;
-    margin: 0 auto;
+    margin: 0;
     object-fit: scale-down;
     font-family: "object-fit: scale-down";
 }
 
 /* PC ver. */
 @media screen and (min-width: 992px) {
+    .team-img {
+        margin-left: 45%;
+    }
+
     .team-img img {
         width: 30%;
     }
